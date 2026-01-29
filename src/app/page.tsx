@@ -17,7 +17,7 @@ export default function Home() {
             Land Your Dream Job Faster
           </h1>
           <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Get a professionally crafted resume, cover letter, and LinkedIn profile
+            ATS-ready CV, ranked job links, and interview prep
             tailored to your target role — delivered in 48 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -37,6 +37,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust Strip */}
+      <div className="bg-gray-900 text-gray-300 py-4">
+        <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm font-medium">
+          <span>One-shot sprint</span>
+          <span className="hidden sm:inline text-gray-600">|</span>
+          <span>48h delivery</span>
+          <span className="hidden sm:inline text-gray-600">|</span>
+          <span>No subscriptions &bull; No guarantees</span>
+        </div>
+      </div>
+
       {/* Deliverables Section */}
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
@@ -44,7 +55,7 @@ export default function Home() {
             What You Get
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Everything you need to stand out in today&apos;s competitive job market
+            The tools you need to land interviews faster
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
@@ -53,9 +64,20 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">ATS-Optimized Resume</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">ATS-Optimized CV</h3>
               <p className="text-gray-600">
-                A clean, modern resume that passes applicant tracking systems and catches recruiter attention.
+                A clean, modern resume built to pass applicant tracking systems and catch recruiter attention.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Ranked Job Links</h3>
+              <p className="text-gray-600">
+                10&ndash;20 hand-picked job links ranked by fit for your target role cluster. No more blind applications.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
@@ -64,20 +86,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Tailored Cover Letter</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Cover Letter Template</h3>
               <p className="text-gray-600">
-                A compelling cover letter that tells your story and connects your experience to the role.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">LinkedIn Optimization</h3>
-              <p className="text-gray-600">
-                Profile headline, summary, and experience sections rewritten to attract recruiters.
+                A tailored cover letter template that connects your experience to the role. Pro &amp; Exec tiers.
               </p>
             </div>
           </div>
@@ -125,7 +136,7 @@ export default function Home() {
             {/* Starter Tier */}
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Starter</h3>
-              <p className="text-gray-600 mb-4">Perfect for a quick refresh</p>
+              <p className="text-gray-600 mb-4">CV + ranked job links</p>
               <div className="mb-6">
                 <span className="text-4xl font-bold text-gray-900">$99</span>
               </div>
@@ -134,13 +145,19 @@ export default function Home() {
                   <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-gray-600">ATS-optimized resume</span>
+                  <span className="text-gray-600">ATS-optimized CV</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-gray-600">1 revision round</span>
+                  <span className="text-gray-600">10&ndash;20 ranked job links (one role cluster)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-gray-600">1 revision</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -155,17 +172,18 @@ export default function Home() {
               >
                 Get Started
               </Link>
+              <p className="text-xs text-gray-400 text-center mt-3">Pay &rarr; complete intake &rarr; delivery in 48h.</p>
             </div>
 
-            {/* Professional Tier */}
+            {/* Pro Tier */}
             <div className="bg-blue-600 p-8 rounded-xl shadow-lg border-2 border-blue-600 relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <span className="bg-yellow-400 text-yellow-900 text-sm font-semibold px-4 py-1 rounded-full">
                   Most Popular
                 </span>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Professional</h3>
-              <p className="text-blue-100 mb-4">Complete job search toolkit</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Pro</h3>
+              <p className="text-blue-100 mb-4">Starter + cover letter</p>
               <div className="mb-6">
                 <span className="text-4xl font-bold text-white">$199</span>
               </div>
@@ -174,25 +192,25 @@ export default function Home() {
                   <svg className="w-5 h-5 text-green-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-white">ATS-optimized resume</span>
+                  <span className="text-white">ATS-optimized CV</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-white">Tailored cover letter</span>
+                  <span className="text-white">10&ndash;20 ranked job links (one role cluster)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-white">LinkedIn optimization</span>
+                  <span className="text-white">Cover letter template</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-white">2 revision rounds</span>
+                  <span className="text-white">1 revision</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -207,12 +225,13 @@ export default function Home() {
               >
                 Get Started
               </Link>
+              <p className="text-xs text-blue-200 text-center mt-3">Pay &rarr; complete intake &rarr; delivery in 48h.</p>
             </div>
 
             {/* Executive Tier */}
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Executive</h3>
-              <p className="text-gray-600 mb-4">For senior roles & career pivots</p>
+              <p className="text-gray-600 mb-4">Pro + Interview Sprint</p>
               <div className="mb-6">
                 <span className="text-4xl font-bold text-gray-900">$349</span>
               </div>
@@ -221,31 +240,31 @@ export default function Home() {
                   <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-gray-600">Everything in Professional</span>
+                  <span className="text-gray-600">Everything in Pro</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-gray-600">Personal branding strategy</span>
+                  <span className="text-gray-600">60-min Interview Sprint (call)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-gray-600">30-min strategy call</span>
+                  <span className="text-gray-600">Interview prep pack</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-gray-600">Unlimited revisions (7 days)</span>
+                  <span className="text-gray-600">1 revision</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-gray-600">24-hour priority delivery</span>
+                  <span className="text-gray-600">48-hour delivery</span>
                 </li>
               </ul>
               <Link
@@ -254,6 +273,7 @@ export default function Home() {
               >
                 Get Started
               </Link>
+              <p className="text-xs text-gray-400 text-center mt-3">Pay &rarr; complete intake &rarr; delivery in 48h.</p>
             </div>
           </div>
         </div>
@@ -270,7 +290,7 @@ export default function Home() {
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
-              "Job application submissions on your behalf",
+              "We don\u2019t apply on your behalf",
               "Interview coaching or mock interviews",
               "Job search strategy or job matching",
               "Salary negotiation support",
@@ -298,11 +318,11 @@ export default function Home() {
             {[
               {
                 q: "How long does delivery take?",
-                a: "Standard delivery is 48 hours from completing the intake form. Executive tier gets 24-hour priority delivery.",
+                a: "All tiers are delivered within 48 hours of completing the intake form.",
               },
               {
                 q: "What if I'm not satisfied?",
-                a: "Each package includes revision rounds. If you're not happy after using your revisions, contact us and we'll make it right.",
+                a: "Each package includes 1 revision round. Contact us via email with your feedback and we'll make changes.",
               },
               {
                 q: "Do you work with all industries?",
@@ -310,7 +330,7 @@ export default function Home() {
               },
               {
                 q: "What format do I receive the documents in?",
-                a: "You'll receive your resume as both PDF and editable DOCX. Cover letter and LinkedIn content come as editable documents.",
+                a: "You'll receive your CV as both PDF and editable DOCX. Cover letter template (Pro/Exec) comes as an editable document.",
               },
               {
                 q: "Can I target multiple job titles?",
