@@ -4,7 +4,6 @@ import Link from "next/link";
 const STRIPE_STARTER = "https://buy.stripe.com/7sYaEP8dk5lQb2y02T2Ry02";
 const STRIPE_PRO = "https://buy.stripe.com/4gMfZ9bpwdSmeeK3f52Ry01";
 const STRIPE_EXECUTIVE = "https://buy.stripe.com/5kQ7sDals4hM6MibLB2Ry00";
-const INTAKE_FORM_LINK = "https://docs.google.com/forms/d/1Ca9exhPeF98McQ-YKc1DFPb__gPkLJu-GB3y1ZfoVyM/viewform";
 const CONTACT_EMAIL = "hello@jobpack.com";
 
 export default function Home() {
@@ -20,18 +19,18 @@ export default function Home() {
             ATS-ready CV, ranked job links, and interview prep
             tailored to your target role — delivered in 48 hours.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
             <Link
               href={STRIPE_STARTER}
               className="inline-block bg-white text-blue-700 font-semibold px-8 py-4 rounded-lg text-lg hover:bg-blue-50 transition-colors shadow-lg"
             >
-              Get Started Now
+              Get your Job Pack (48h delivery)
             </Link>
             <Link
-              href={INTAKE_FORM_LINK}
-              className="inline-block bg-transparent border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-white/10 transition-colors"
+              href="#pricing"
+              className="text-blue-200 hover:text-white text-base underline underline-offset-4 transition-colors"
             >
-              Fill Out Intake Form
+              See what&apos;s included
             </Link>
           </div>
         </div>
@@ -124,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 sm:py-24 bg-gray-50">
+      <section id="pricing" className="py-16 sm:py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
             Simple, Transparent Pricing
@@ -168,9 +167,9 @@ export default function Home() {
               </ul>
               <Link
                 href={STRIPE_STARTER}
-                className="block w-full text-center bg-gray-100 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors"
+                className="block w-full text-center bg-gray-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
               >
-                Get Started
+                Get your Job Pack (48h delivery)
               </Link>
               <p className="text-xs text-gray-400 text-center mt-3">Pay &rarr; complete intake &rarr; delivery in 48h.</p>
             </div>
@@ -223,7 +222,7 @@ export default function Home() {
                 href={STRIPE_PRO}
                 className="block w-full text-center bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
-                Get Started
+                Get your Job Pack (48h delivery)
               </Link>
               <p className="text-xs text-blue-200 text-center mt-3">Pay &rarr; complete intake &rarr; delivery in 48h.</p>
             </div>
@@ -269,13 +268,19 @@ export default function Home() {
               </ul>
               <Link
                 href={STRIPE_EXECUTIVE}
-                className="block w-full text-center bg-gray-100 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors"
+                className="block w-full text-center bg-gray-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
               >
-                Get Started
+                Get your Job Pack (48h delivery)
               </Link>
               <p className="text-xs text-gray-400 text-center mt-3">Pay &rarr; complete intake &rarr; delivery in 48h.</p>
             </div>
           </div>
+          <p className="text-center text-sm text-gray-500 mt-8">
+            Not sure yet?{" "}
+            <Link href="#faq" className="text-blue-600 hover:text-blue-800 underline underline-offset-4">
+              Check the resume red flags
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -309,7 +314,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 sm:py-24 bg-gray-50">
+      <section id="faq" className="py-16 sm:py-24 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
             Frequently Asked Questions
@@ -359,18 +364,18 @@ export default function Home() {
           <p className="text-xl text-blue-100 mb-8">
             Stop sending applications into the void. Get a Job Pack that opens doors.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
             <Link
               href={STRIPE_STARTER}
               className="inline-block bg-white text-blue-700 font-semibold px-8 py-4 rounded-lg text-lg hover:bg-blue-50 transition-colors shadow-lg"
             >
-              Get Your Job Pack
+              Get your Job Pack (48h delivery)
             </Link>
             <Link
-              href={INTAKE_FORM_LINK}
-              className="inline-block bg-transparent border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-white/10 transition-colors"
+              href="#pricing"
+              className="text-blue-200 hover:text-white text-base underline underline-offset-4 transition-colors"
             >
-              Start Intake Form
+              See what&apos;s included
             </Link>
           </div>
         </div>
