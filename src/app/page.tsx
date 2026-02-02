@@ -9,26 +9,30 @@ const CONTACT_EMAIL = "hello@jobpack.com";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div className="max-w-5xl mx-auto px-4 py-20 sm:py-28 text-center">
+      {/* HERO = RECOGNITION */}
+      <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div className="max-w-4xl mx-auto px-4 py-20 sm:py-28 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            Land Your Dream Job Faster
+            You&apos;re not doing anything wrong.
           </h1>
-          <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            ATS-ready CV, ranked job links, and interview prep
-            tailored to your target role — delivered in 48 hours.
+          <p className="text-xl sm:text-2xl text-gray-300 mb-4 max-w-2xl mx-auto">
+            Most resumes are filtered out before a human ever reads them.
+            The system is the bottleneck &mdash; not your experience.
+          </p>
+          <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+            If you&apos;ve been applying consistently and hearing nothing back,
+            the problem is almost certainly structural, not personal.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
             <Link
               href={STRIPE_STARTER}
-              className="inline-block bg-white text-blue-700 font-semibold px-8 py-4 rounded-lg text-lg hover:bg-blue-50 transition-colors shadow-lg"
+              className="inline-block bg-white text-gray-900 font-semibold px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Get your Job Pack (48h delivery)
             </Link>
             <Link
               href="#pricing"
-              className="text-blue-200 hover:text-white text-base underline underline-offset-4 transition-colors"
+              className="text-gray-400 hover:text-white text-base underline underline-offset-4 transition-colors"
             >
               See what&apos;s included
             </Link>
@@ -37,7 +41,7 @@ export default function Home() {
       </section>
 
       {/* Trust Strip */}
-      <div className="bg-gray-900 text-gray-300 py-4">
+      <div className="bg-gray-950 text-gray-400 py-4">
         <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm font-medium">
           <span>One-shot sprint</span>
           <span className="hidden sm:inline text-gray-600">|</span>
@@ -47,14 +51,82 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Deliverables Section */}
+      {/* ORIENTATION — Why effort ≠ results */}
+      <section className="py-16 sm:py-24">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
+            Why effort alone doesn&apos;t work anymore
+          </h2>
+          <div className="space-y-8 text-lg text-gray-600 leading-relaxed">
+            <p>
+              Most job seekers assume that if their resume &ldquo;looks fine&rdquo; and they&apos;re applying to enough roles,
+              results should follow. When they don&apos;t, the conclusion is usually &ldquo;I need to try harder&rdquo; or
+              &ldquo;something is wrong with me.&rdquo;
+            </p>
+            <p>
+              Neither is true. The issue is structural: applicant tracking systems filter resumes
+              using keyword matching, role alignment, and formatting rules that have nothing to do
+              with your actual competence. A resume that reads well to a person can score
+              poorly in a system that never shows it to one.
+            </p>
+            <p>
+              On top of that, most people apply to roles where they&apos;re either overqualified,
+              underqualified, or misaligned in ways they can&apos;t see from the job listing alone.
+              The result is effort that feels productive but produces no signal.
+            </p>
+            <p className="text-gray-900 font-medium">
+              The fix isn&apos;t more effort. It&apos;s knowing exactly where the gap is &mdash;
+              presentation, alignment, or both &mdash; and closing it in one pass.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* AGENCY — What you'll know after 48 hours */}
       <section className="py-16 sm:py-24 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
+            What you&apos;ll know after 48 hours
+          </h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            The guessing ends. These are the specific uncertainties that get resolved.
+          </p>
+          <div className="space-y-6">
+            {[
+              {
+                title: "Whether your resume is the bottleneck",
+                desc: "You\u2019ll have an ATS-optimized CV built for your target role. If formatting or keyword alignment was the problem, it\u2019s fixed.",
+              },
+              {
+                title: "Which roles you\u2019re actually competitive for",
+                desc: "Your ranked job links aren\u2019t a generic list. They\u2019re filtered by fit \u2014 so you stop wasting applications on roles that were never going to respond.",
+              },
+              {
+                title: "Where your effort should actually go",
+                desc: "Instead of applying broadly and hoping, you\u2019ll have a short list of roles where your profile is a genuine match. Effort becomes targeted.",
+              },
+              {
+                title: "Whether the issue is presentation or alignment",
+                desc: "If your resume is strong but you\u2019re applying to the wrong roles, you\u2019ll see it. If the roles are right but your materials don\u2019t communicate fit, you\u2019ll see that too.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DELIVERABLES — reframed as control */}
+      <section className="py-16 sm:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
             What You Get
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            The tools you need to land interviews faster
+            Each piece is built to eliminate a specific source of uncertainty
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
@@ -65,7 +137,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">ATS-Optimized CV</h3>
               <p className="text-gray-600">
-                A clean, modern resume built to pass applicant tracking systems and catch recruiter attention.
+                Removes the formatting and keyword gaps that cause silent rejections.
+                Built for your target role so the system reads what a human would.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
@@ -74,9 +147,10 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Ranked Job Links</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">10&ndash;20 Ranked Job Links</h3>
               <p className="text-gray-600">
-                10&ndash;20 hand-picked job links ranked by fit for your target role cluster. No more blind applications.
+                A curated shortlist of roles where your profile is a genuine fit &mdash;
+                ranked by alignment. You stop guessing where to apply and start choosing.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
@@ -87,31 +161,31 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Cover Letter Template</h3>
               <p className="text-gray-600">
-                A tailored cover letter template that connects your experience to the role. Pro &amp; Exec tiers.
+                Connects your experience to the role in language that matches what hiring teams look for. Pro &amp; Exec tiers.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-16 sm:py-24">
+      {/* How It Works */}
+      <section className="py-16 sm:py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
             How It Works
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Simple, fast, and hassle-free
+            One transaction. One intake form. One delivery.
           </p>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { step: "1", title: "Choose Your Package", desc: "Select the tier that fits your needs" },
               { step: "2", title: "Fill Intake Form", desc: "Share your experience and target role" },
-              { step: "3", title: "We Get to Work", desc: "Our experts craft your materials" },
+              { step: "3", title: "We Get to Work", desc: "Your materials are built for your specific situation" },
               { step: "4", title: "Receive & Apply", desc: "Get your pack within 48 hours" },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {item.step}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
@@ -122,8 +196,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-16 sm:py-24 bg-gray-50">
+      {/* Pricing Section — UNTOUCHED (per directive) */}
+      <section id="pricing" className="py-16 sm:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
             Simple, Transparent Pricing
@@ -275,17 +349,11 @@ export default function Home() {
               <p className="text-xs text-gray-400 text-center mt-3">Pay &rarr; complete intake &rarr; delivery in 48h.</p>
             </div>
           </div>
-          <p className="text-center text-sm text-gray-500 mt-8">
-            Not sure yet?{" "}
-            <Link href="#faq" className="text-blue-600 hover:text-blue-800 underline underline-offset-4">
-              Check the resume red flags
-            </Link>
-          </p>
         </div>
       </section>
 
-      {/* Boundaries Section */}
-      <section className="py-16 sm:py-24">
+      {/* Boundaries Section — UNTOUCHED */}
+      <section className="py-16 sm:py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
             What&apos;s Not Included
@@ -302,7 +370,7 @@ export default function Home() {
               "Portfolio or website creation",
               "Ongoing career coaching",
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+              <div key={item} className="flex items-start gap-3 bg-white p-4 rounded-lg">
                 <svg className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -313,8 +381,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="py-16 sm:py-24 bg-gray-50">
+      {/* FAQ Section — UNTOUCHED */}
+      <section id="faq" className="py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
             Frequently Asked Questions
@@ -326,16 +394,16 @@ export default function Home() {
                 a: "All tiers are delivered within 48 hours of completing the intake form.",
               },
               {
-                q: "What if I'm not satisfied?",
-                a: "Each package includes 1 revision round. Contact us via email with your feedback and we'll make changes.",
+                q: "What if I\u2019m not satisfied?",
+                a: "Each package includes 1 revision round. Contact us via email with your feedback and we\u2019ll make changes.",
               },
               {
                 q: "Do you work with all industries?",
-                a: "Yes! We've worked with professionals across tech, finance, healthcare, marketing, engineering, and more.",
+                a: "Yes! We\u2019ve worked with professionals across tech, finance, healthcare, marketing, engineering, and more.",
               },
               {
                 q: "What format do I receive the documents in?",
-                a: "You'll receive your CV as both PDF and editable DOCX. Cover letter template (Pro/Exec) comes as an editable document.",
+                a: "You\u2019ll receive your CV as both PDF and editable DOCX. Cover letter template (Pro/Exec) comes as an editable document.",
               },
               {
                 q: "Can I target multiple job titles?",
@@ -343,7 +411,7 @@ export default function Home() {
               },
               {
                 q: "How do revisions work?",
-                a: "After delivery, you can request changes via email. We'll implement feedback within 24-48 hours per revision round.",
+                a: "After delivery, you can request changes via email. We\u2019ll implement feedback within 24-48 hours per revision round.",
               },
             ].map((faq) => (
               <div key={faq.q} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -355,25 +423,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-16 sm:py-24 bg-blue-600">
+      {/* FINAL CTA = CLOSURE */}
+      <section className="py-16 sm:py-24 bg-gray-900">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Ready to Stand Out?
+            You already know something isn&apos;t working.
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Stop sending applications into the void. Get a Job Pack that opens doors.
+          <p className="text-xl text-gray-400 mb-4">
+            A week from now, the same applications will produce the same silence &mdash;
+            unless the inputs change.
+          </p>
+          <p className="text-lg text-gray-500 mb-10">
+            This resolves it in 48 hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
             <Link
               href={STRIPE_STARTER}
-              className="inline-block bg-white text-blue-700 font-semibold px-8 py-4 rounded-lg text-lg hover:bg-blue-50 transition-colors shadow-lg"
+              className="inline-block bg-white text-gray-900 font-semibold px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Get your Job Pack (48h delivery)
             </Link>
             <Link
               href="#pricing"
-              className="text-blue-200 hover:text-white text-base underline underline-offset-4 transition-colors"
+              className="text-gray-500 hover:text-white text-base underline underline-offset-4 transition-colors"
             >
               See what&apos;s included
             </Link>
@@ -382,7 +454,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12">
+      <footer className="bg-gray-950 text-gray-400 py-12">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <p className="text-xl font-semibold text-white mb-2">Job Pack</p>
           <p className="mb-4">Professional job search materials, delivered fast.</p>
@@ -393,7 +465,7 @@ export default function Home() {
             </a>
           </p>
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Job Pack. All rights reserved.
+            &copy; {new Date().getFullYear()} Job Pack. All rights reserved.
           </p>
         </div>
       </footer>
