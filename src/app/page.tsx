@@ -176,49 +176,65 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DELIVERABLES — reframed as control */}
+      {/* DELIVERABLES — PFS Framework: Problem → Feature → Solution */}
       <section className="py-16 sm:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
             What You Get
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Each piece is built to eliminate a specific source of uncertainty
+            Three deliverables. Each one solves a specific problem.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
+              <p className="text-sm font-medium text-red-500 mb-3 uppercase tracking-wide">The problem</p>
+              <p className="text-gray-600 text-sm mb-4">
+                Your resume looks fine to you &mdash; but ATS software can&apos;t parse the formatting,
+                misses your keywords, and filters you out before a recruiter sees it.
+              </p>
+              <p className="text-sm font-medium text-blue-600 mb-3 uppercase tracking-wide">What we build</p>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">ATS-Optimized CV</h3>
-              <p className="text-gray-600">
-                Removes the formatting and keyword gaps that cause silent rejections.
-                Built for your target role so the system reads what a human would.
+              <p className="text-gray-600 text-sm mb-4">
+                Rebuilt from scratch for your target role. Clean formatting ATS can read,
+                keywords pulled from real job descriptions, achievements quantified.
+              </p>
+              <p className="text-sm font-medium text-green-600 mb-2 uppercase tracking-wide">What that means</p>
+              <p className="text-gray-900 font-medium text-sm">
+                Your resume passes the filter. Recruiters actually see it.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                </svg>
-              </div>
+              <p className="text-sm font-medium text-red-500 mb-3 uppercase tracking-wide">The problem</p>
+              <p className="text-gray-600 text-sm mb-4">
+                You&apos;re applying to dozens of roles with no way to know which ones
+                you&apos;re actually competitive for. Most applications go nowhere.
+              </p>
+              <p className="text-sm font-medium text-blue-600 mb-3 uppercase tracking-wide">What we build</p>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">10&ndash;20 Ranked Job Links</h3>
-              <p className="text-gray-600">
-                A curated shortlist of roles where your profile is a genuine fit &mdash;
-                ranked by alignment. You stop guessing where to apply and start choosing.
+              <p className="text-gray-600 text-sm mb-4">
+                Roles sourced and ranked by how well your background matches.
+                Each one includes a fit rationale &mdash; not just a link.
+              </p>
+              <p className="text-sm font-medium text-green-600 mb-2 uppercase tracking-wide">What that means</p>
+              <p className="text-gray-900 font-medium text-sm">
+                You stop spraying applications and start targeting roles where you belong.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
+              <p className="text-sm font-medium text-red-500 mb-3 uppercase tracking-wide">The problem</p>
+              <p className="text-gray-600 text-sm mb-4">
+                Generic cover letters get ignored. But writing a tailored one for every
+                application takes hours you don&apos;t have.
+              </p>
+              <p className="text-sm font-medium text-blue-600 mb-3 uppercase tracking-wide">What we build</p>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Cover Letter Template</h3>
-              <p className="text-gray-600">
-                Connects your experience to the role in language that matches what hiring teams look for. Pro &amp; Exec tiers.
+              <p className="text-gray-600 text-sm mb-4">
+                A customizable template that connects your experience to the role
+                in language hiring managers respond to. Pro &amp; Exec tiers.
+              </p>
+              <p className="text-sm font-medium text-green-600 mb-2 uppercase tracking-wide">What that means</p>
+              <p className="text-gray-900 font-medium text-sm">
+                Every application has a cover letter that sounds like you wrote it for that specific role.
               </p>
             </div>
           </div>
@@ -282,7 +298,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Section — UNTOUCHED (per directive) */}
+      {/* FAQ — Exhaust questions BEFORE price drop (masterclass principle) */}
+      <section id="faq" className="py-16 sm:py-24">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
+            Questions you probably have
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: "How long does delivery take?",
+                a: "All tiers are delivered within 48 hours of completing the intake form.",
+              },
+              {
+                q: "What if I\u2019m not satisfied?",
+                a: "Each package includes 1 revision round. Contact us via email with your feedback and we\u2019ll make changes.",
+              },
+              {
+                q: "Do you work with all industries?",
+                a: "Yes \u2014 tech, finance, healthcare, marketing, engineering, and more.",
+              },
+              {
+                q: "What format do I receive the documents in?",
+                a: "Your CV comes as both PDF and editable DOCX. Cover letter template (Pro/Exec) is an editable document.",
+              },
+              {
+                q: "Can I target multiple job titles?",
+                a: "Each package is optimized for one target role. Need multiple versions? Contact us for a custom quote.",
+              },
+              {
+                q: "How do revisions work?",
+                a: "After delivery, request changes via email. We implement feedback within 24\u201348 hours per revision round.",
+              },
+            ].map((faq) => (
+              <div key={faq.q} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.q}</h3>
+                <p className="text-gray-600">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ALIGNMENT — Get the head-nod before showing price */}
+      <section className="py-12 sm:py-16">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <p className="text-xl sm:text-2xl text-gray-900 font-medium leading-relaxed">
+            If your resume isn&apos;t getting past ATS filters &mdash; and you know it &mdash;
+            the question isn&apos;t whether to fix it. It&apos;s whether to spend 40 more hours
+            figuring it out yourself, or let someone who&apos;s done it hundreds of times
+            handle it in 48 hours.
+          </p>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
       <section id="pricing" className="py-16 sm:py-24">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
@@ -461,48 +531,6 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
                 <span className="text-gray-600">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section — UNTOUCHED */}
-      <section id="faq" className="py-16 sm:py-24">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-6">
-            {[
-              {
-                q: "How long does delivery take?",
-                a: "All tiers are delivered within 48 hours of completing the intake form.",
-              },
-              {
-                q: "What if I\u2019m not satisfied?",
-                a: "Each package includes 1 revision round. Contact us via email with your feedback and we\u2019ll make changes.",
-              },
-              {
-                q: "Do you work with all industries?",
-                a: "Yes! We\u2019ve worked with professionals across tech, finance, healthcare, marketing, engineering, and more.",
-              },
-              {
-                q: "What format do I receive the documents in?",
-                a: "You\u2019ll receive your CV as both PDF and editable DOCX. Cover letter template (Pro/Exec) comes as an editable document.",
-              },
-              {
-                q: "Can I target multiple job titles?",
-                a: "Each package is optimized for one target role. Need multiple versions? Contact us for a custom quote.",
-              },
-              {
-                q: "How do revisions work?",
-                a: "After delivery, you can request changes via email. We\u2019ll implement feedback within 24-48 hours per revision round.",
-              },
-            ].map((faq) => (
-              <div key={faq.q} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.q}</h3>
-                <p className="text-gray-600">{faq.a}</p>
               </div>
             ))}
           </div>
