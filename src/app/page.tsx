@@ -51,6 +51,63 @@ export default function Home() {
         </div>
       </div>
 
+      {/* THE REAL PROBLEM — ATS blind spot reveal */}
+      <section className="py-16 sm:py-24">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
+            The real problem isn&apos;t your experience
+          </h2>
+          <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+            <p className="text-xl font-medium text-gray-900">
+              75% of resumes are rejected before a human ever reads them.
+            </p>
+            <p>
+              It&apos;s not because you&apos;re unqualified. It&apos;s because Applicant Tracking
+              Systems &mdash; the software that screens every application &mdash; can&apos;t read
+              your resume the way a person would.
+            </p>
+            <p>
+              Beautiful formatting? ATS sees gibberish. Two-column layout? ATS reads it as one
+              garbled line. Missing a keyword the system expects? You&apos;re invisible.
+            </p>
+            <p>
+              Someone with half your experience but a properly formatted resume gets the
+              interview. You don&apos;t.
+            </p>
+            <p className="text-gray-900 font-semibold text-xl">
+              That&apos;s not a you problem. That&apos;s a translation problem.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* THE NUMBERS — Borrowed authority via stats */}
+      <section className="py-16 sm:py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
+            The numbers behind the silence
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { stat: "75%", label: "of resumes rejected by ATS before human review", source: "SHRM" },
+              { stat: "98%", label: "of Fortune 500 companies use ATS software", source: "Jobscan" },
+              { stat: "250", label: "average applicants per corporate job opening", source: "Glassdoor" },
+              { stat: "8 sec", label: "average recruiter review time for resumes that pass ATS", source: "Indeed" },
+            ].map((item) => (
+              <div key={item.stat} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                <div className="text-4xl font-bold text-gray-900 mb-2">{item.stat}</div>
+                <p className="text-gray-600 text-sm mb-2">{item.label}</p>
+                <p className="text-gray-400 text-xs">{item.source}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-gray-500 mt-8 text-base">
+            The system isn&apos;t designed for you to succeed. It&apos;s designed to filter.
+            Your job is to get past the filter.
+          </p>
+        </div>
+      </section>
+
       {/* ORIENTATION — Why effort ≠ results */}
       <section className="py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4">
@@ -192,6 +249,35 @@ export default function Home() {
                 <p className="text-gray-600">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* THE COST OF NOT KNOWING — Money reframe + price anchoring */}
+      <section className="py-16 sm:py-24">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
+            What you&apos;re already spending
+          </h2>
+          <div className="space-y-4 mb-8">
+            {[
+              { item: "LinkedIn Premium", cost: "$360/year" },
+              { item: "Professional resume writer", cost: "$300 \u2013 $2,000" },
+              { item: "Career coach (per hour)", cost: "$150+" },
+              { item: "Job board subscriptions", cost: "$25 \u2013 $50/month" },
+              { item: "Time lost to applications that never get seen", cost: "incalculable" },
+            ].map((row) => (
+              <div key={row.item} className="flex items-center justify-between py-3 border-b border-gray-100">
+                <span className="text-gray-600">{row.item}</span>
+                <span className="text-gray-900 font-semibold">{row.cost}</span>
+              </div>
+            ))}
+          </div>
+          <div className="bg-gray-900 text-white p-8 rounded-xl text-center">
+            <p className="text-3xl font-bold mb-2">Job Pack: $99. One time.</p>
+            <p className="text-gray-400">
+              Done in 48 hours. Less than one month of LinkedIn Premium combined with a resume review.
+            </p>
           </div>
         </div>
       </section>
@@ -423,18 +509,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINAL CTA = CLOSURE */}
+      {/* FINAL CTA = CLOSURE — Future state + presupposition */}
       <section className="py-16 sm:py-24 bg-gray-900">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            You already know something isn&apos;t working.
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Two weeks from now, you&apos;ll either still be refreshing your inbox &mdash;
+            or you&apos;ll know exactly which companies to target and why you&apos;re competitive for each one.
           </h2>
-          <p className="text-xl text-gray-400 mb-4">
-            A week from now, the same applications will produce the same silence &mdash;
-            unless the inputs change.
+          <p className="text-lg text-gray-400 mb-4 max-w-2xl mx-auto">
+            When you open your Job Pack, you&apos;ll find a resume that speaks the language ATS
+            software understands, a list of roles selected specifically for your background,
+            and a guide that tells you exactly what to do next.
           </p>
           <p className="text-lg text-gray-500 mb-10">
-            This resolves it in 48 hours.
+            The job search doesn&apos;t have to feel like shouting into a void.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
             <Link
